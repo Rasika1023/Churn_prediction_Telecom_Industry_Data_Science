@@ -4,7 +4,7 @@
 ## Project Overview
 
 
-This project is an end-to-end data analysis solution designed to extract critical business insights from Telecom data set. We utilize Python for data processing and analysis, Machine Learning algorithms for model building and structured problem-solving techniques to solve key business questions. The project is ideal for data analysts looking to develop skills in data manipulation, model building , and data pipeline creation.
+This project is an end-to-end data analysis solution designed to extract critical business insights from Telecom data set. We utilize Python for data processing and analysis, Machine Learning algorithms for model building and structured problem-solving techniques to determine the reasons for customer churn . The project is ideal for data analysts looking to develop skills in data manipulation, model building , and data pipeline creation.
 
 ---
 
@@ -45,11 +45,14 @@ This project is an end-to-end data analysis solution designed to extract critica
    - **Splitting of data**: The data is split into independent and dependent data respetively.The further split of training and test dataset occurs to test for the accuracy of the model prediction. The data is split into 80% training dataset and 20% test dataset.
 
 ### 7. Model Building
-   - **Standardize the data**: The data is standardized using `StandardScaler` for the algorithms to work efficiently on all the scale.
-
-
-
-### 9. Project Publishing and Documentation
+   - **Standardize the data**:  The data is standardized using `StandardScaler` for the algorithms to work efficiently on the same scale.
+   - **PCA**:  The efficiency of the model reduces due to more number of dimesnions in dataset. Hence Principal Component Analysis is applied to reduce the dimensionality.
+   - **Algorithms**: Various Machine Learning algorithms are used to check for the churn rate in telecom industry.Ensemble Algorithms like Random Forest Classifier, Decision Tree classifier, Support Vector Machine and LightGBM is used. Among which the LightGBM model stood exceptionally good in determining the customer churn for a service provider.
+   - **Hyper-parameter tuning**: Many ensemble models contains various parameters, where it is necessary to determine the most optimal parameter that enhances the model performance. Hyper parameter tuning was carried out by GridSearchCV and RandomSearchCV. Along with which bagging technique was used to improve the model's efficiency.
+   - **Performance Metrics**: Used various performance metrics like Accuracy, Recall, Precision, F-measure and AUC-ROC, to evaluate the model's performance. The AUC-ROC was used as an measure to determine the churn rate, where it was around 0.90%.
+   - **Visualization**:  Various charts were used to plot the performance of the model using matplotlib or seaborn. 
+     
+### 8. Project Publishing and Documentation
    - **Documentation**: Maintain well-structured documentation of the entire process in Markdown or a Jupyter Notebook.
    - **Project Publishing**: Publish the completed project on GitHub or any other version control platform, including:
      - The `README.md` file (this document).
@@ -62,17 +65,17 @@ This project is an end-to-end data analysis solution designed to extract critica
 
 - **Python 3.8+**
 - **Python Libraries**:
-  - `pandas`, `numpy`, `matplotlib`, `scikit-learn`
+  - `pandas`, `numpy`, `matplotlib`, `scikit-learn`,`seaborn`
 - **Kaggle API Key** (for data downloading)
 
 ## Getting Started
 
 1. Clone the repository:
-   ```bash
+   ```powershell
    git clone <repo-url>
    ```
 2. Install Python libraries:
-   ```bash
+   ```powershell
    pip install -r requirements.txt
    ```
 3. Set up your Kaggle API, download the data, and follow the steps to load and analyze.
@@ -93,8 +96,8 @@ This project is an end-to-end data analysis solution designed to extract critica
 ## Results and Insights
 
 This section will include your analysis findings:
-- **Profitability**: Insights into the most profitable customers.
-- **Customer Behavior**: Predicting the Customers who are likely to churn the service providers.
+- **Profitability**: Determines the customer who are likely to churn in the future and also tells the reason for churning which gives an insights for the service provider to reframe their policies if necessary. Reducing the churn rate by 5% , increases the profit by 60%.
+- **Customer Behavior**: Predicting the Customers who are likely to churn the service providers. 
 
 ## Future Enhancements
 
